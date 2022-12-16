@@ -55,8 +55,8 @@ Spring으로 로그인 기능이 추가된 블로그를 구현합니다.
 
 | 기능                  | Method | URL              | Request                                                      | Response                                                     |
 | :-------------------- | :----- | :--------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| 회원가입              | POST   | /api/user/signup | {<br/>"username": "user1",<br/>"password": "password1"}      | {<br/>"status": "OK",<br/>"message": "회원가입 완료",<br/>"data": {<br/>"username": "username1",<br/> "posts": []<br/>}<br/>} |
-| 로그인                | POST   | /api/user/login  | {<br/>"username": "user1",<br/>"password": "password1"}      | {<br/>"status": "OK",<br/>"message": "로그인 완료",<br/>"data": {<br/>"username": "username1",<br/> "posts": []<br/>}<br/>} |
+| 회원가입              | POST   | /api/user/signup | {<br/>"username": "user1",<br/>"password": "password1"}      | {<br/>"status": "OK",<br/>"message": "회원가입 완료",<br/>"data": {<br/>"username": "username1",<br/> "posts": []<br/>}} |
+| 로그인                | POST   | /api/user/login  | {<br/>"username": "user1",<br/>"password": "password1"}      | {<br/>"status": "OK",<br/>"message": "로그인 완료",<br/>"data": {<br/>"username": "username1",<br/> "posts": []<br/>}} |
 | 전체 게시글 목록 조회 | GET    | /api/posts       | -                                                            | {<br/> { <br/>"author": "username2" <br/>"title": "title2", <br/>"content": "content2", <br/>"createdAt": "2022-07-25T12:43:01.226062”, <br/>"modifiedAt": "2022-07-25T12:43:01.226062”, <br/>}, <br/>{ <br/>"author": "username1" <br/>"title": "title1", <br/>"content": "content1", <br/>"createdAt": "2022-07-25T12:43:01.226062”, <br/>"modifiedAt": "2022-07-25T12:43:01.226062”, <br/>}, <br/>… <br/>} |
 | 선택한 게시글 조회    | GET    | /api/post/{id}   | JWT Token                                                    | { <br/>"author": "username2" <br/>"title": "title2", <br/>"content": "content2", <br/>"createdAt": "2022-07-25T12:43:01.226062”, <br/>"modifiedAt": "2022-07-25T12:43:01.226062”, <br/>} |
 | 게시글 작성           | POST   | /api/post        | JWT Token,<br/>{<br>"title" : "title", <br/>"content" : "content", <br/>} | { <br/>"author": "username2" <br/>"title": "title2", <br/>"content": "content2", <br/>"createdAt": "2022-07-25T12:43:01.226062”, <br/>"modifiedAt": "2022-07-25T12:43:01.226062”, <br/>} |
@@ -158,6 +158,8 @@ Spring으로 로그인 기능이 추가된 블로그를 구현합니다.
 ​	=> `casecade` 옵션을 통해 연관된 엔티티의 처리를 추가합니다.
 
 <br>
+
+
 
 ​	**A6. IoC / DI 에 대해 간략하게 설명해 주세요! **
 
